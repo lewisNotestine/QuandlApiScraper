@@ -1,0 +1,10 @@
+*.exe
+*.pdb
+*.obj
+/bin
+/obj
+QuandlApiScraper/bin
+QuandlApiScraper/obj
+*.suo
+*.user
+
