@@ -1,3 +1,5 @@
+using QuandlApiScraper.API;
+using QuandlApiScraper.BLL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,8 +11,21 @@ namespace QuandlApiScraper
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World");
-            Console.ReadLine();
+            if (!args.Any() || args.Length > 1)
+            { 
+                Console.WriteLine("Usage : QuandlApiScraper <Your API KEY>");
+                return; 
+            }
+
+            var config = new ScraperConfig(args[0]);
+
+            var testZipGatherer = new ZipCodeGatherer(config);
+            var testVariableCodes = new List<string>() 
+            {
+                VariableCode.A
+            };
+
+            testZipGatherer.GetDataForZipCode("97214", testVariableCodes); 
         }
     }
 }

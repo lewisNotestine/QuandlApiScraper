@@ -34,6 +34,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -41,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="API\QuandlApiRequest.cs" />
     <Compile Include="API\ZipCodeGatherer.cs" />
     <Compile Include="BLL\DatasetBuilder.cs" />
     <Compile Include="BLL\Variable.cs" />
@@ -48,6 +50,7 @@
     <Compile Include="BLL\VariableSet.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ScraperConfig.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">
